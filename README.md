@@ -14,3 +14,6 @@ A simple and intuitive web/mobile app to help users track their daily expenses, 
 - Frontend: HTML, CSS, JavaScript
 - Backend: not developed yet
 - Deployment: not developed yet
+
+Screenshots
+(E:\Expense-tracker\expense-tracker\expense.jpg)
