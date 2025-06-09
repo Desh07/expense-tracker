@@ -1,0 +1,198 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  margin: 0;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 500px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  padding: 32px 28px 24px 28px;
+}
+
+h1 {
+  text-align: center;
+  color: #ff7e5f;
+  margin-bottom: 18px;
+  letter-spacing: 2px;
+}
+
+.balance {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  margin: 18px 0 22px 0;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+form input,
+form select,
+form button {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+
+form input:focus,
+form select:focus {
+  border: 1.5px solid #ff7e5f;
+}
+
+form button {
+  background: linear-gradient(90deg, #ff7e5f 0%, #feb47b 100%);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(255,126,95,0.08);
+}
+
+form button:hover {
+  background: linear-gradient(90deg, #feb47b 0%, #ff7e5f 100%);
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin: 18px 0 10px 0;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#export-csv {
+  background: #2196f3;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+#export-csv:hover {
+  background: #1565c0;
+}
+
+#transactions {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+}
+
+#transactions li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  border-radius: 7px;
+  margin-bottom: 10px;
+  padding: 10px 14px;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: background 0.2s;
+}
+
+#transactions li.income {
+  border-left: 5px solid #43e97b;
+  color: #2e7d32;
+}
+
+#transactions li.expense {
+  border-left: 5px solid #ff7e5f;
+  color: #c62828;
+}
+
+#transactions li.editing {
+  background: #fffde7;
+}
+
+li button.edit {
+  background: #ffc107;
+  color: #333;
+  border: none;
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+li button.edit:hover {
+  background: #ffb300;
+}
+
+li button {
+  background: #f44336;
+  color: #fff;
+  border: none;
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+li button:hover {
+  background: #d32f2f;
+}
+
+#clear-all {
+  margin-top: 10px;
+  background: #f44336;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  width: 100%;
+  transition: background 0.2s;
+}
+
+#clear-all:hover {
+  background: #d32f2f;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 16px 4px 10px 4px;
+  }
+
+  form,
+  .filters {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  #clear-all {
+    padding: 10px 0;
+  }
+}

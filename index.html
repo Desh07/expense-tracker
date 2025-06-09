@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Expense Tracker</h1>
+    <div class="balance">Total Balance: $<span id="balance">0</span></div>
+    <div class="summary">
+      <span>Income: $<span id="income">0</span></span>
+      <span>Expense: $<span id="expense">0</span></span>
+    </div>
+    <form id="income-form">
+      <input type="number" id="income-amount" placeholder="Income Amount" required>
+      <select id="income-category">
+        <option value="salary">Salary</option>
+        <option value="business">Business</option>
+        <option value="investment">Investment</option>
+        <option value="gift">Gift</option>
+        <option value="other">Other</option>
+      </select>
+      <input type="date" id="income-date" required>
+      <button type="submit">Add Income</button>
+    </form>
+    <form id="expense-form">
+      <input type="text" id="description" placeholder="Expense Description" required>
+      <input type="number" id="amount" placeholder="Expense Amount" required>
+      <select id="category">
+        <option value="food">Food</option>
+        <option value="travel">Travel</option>
+        <option value="shopping">Shopping</option>
+        <option value="utilities">Utilities</option>
+        <option value="entertainment">Entertainment</option>
+        <option value="health">Health</option>
+        <option value="education">Education</option>
+        <option value="other">Other</option>
+      </select>
+      <input type="date" id="date" required>
+      <button type="submit">Add Expense</button>
+    </form>
+    <div class="filters">
+      <select id="filter-category">
+        <option value="all">All Categories</option>
+        <option value="food">Food</option>
+        <option value="travel">Travel</option>
+      </select>
+      <input type="date" id="filter-date">
+      <button id="export-csv" type="button">Export CSV</button>
+    </div>
+    <ul id="transactions"></ul>
+    <button id="clear-all" type="button">Clear All</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
